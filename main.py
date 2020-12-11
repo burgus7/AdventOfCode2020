@@ -8,12 +8,23 @@ for i in range (len(data)):
   data[i] = int(data[i])
 
 for i in range (len(data)):
-  complementaryNum = 2020 - data[i]
   for j in range (len(data)):
-    if data[j] == complementaryNum:
-      x = data[i]
-      y = data[j]
+    sum = data[i] + data[j]
+    if sum == 2020:
+      num1 = data[i]
+      num2 = data[j]
 
-print ("part 1: " + str(x*y))
+print ("part 1: " + str(num1*num2))
 
-# stop killing it gosh, save it and make a new solution in somewhere else
+# stop killing it gosh, save it and make a new solution in somewhere else okay done :)
+
+for i in range (len(data)):
+  for j in range (len(data)):
+    for k in range (len(data)):
+      sum = data[i] + data[j] + data[k]
+      if sum == 2020:
+        num1 = data[i]
+        num2 = data[j]
+        num3 = data[k]
+
+print ("part 2: " + str(num1*num2*num3))
