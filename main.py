@@ -14,15 +14,6 @@ for i in range (len(data)):
       x = data[i]
       y = data[j]
 
-print (x, y, x+y)
-print (x*y)
+print ("part 1: " + str(x*y))
 
-#idk if this is right but i have to stop now. food time. 
-# aw sad, test it! submit the number and see
-
-# you have telememe open right? yeah
-
-
-#dataList = dataString.split("\n")
-
-# You can 100% do this challenge :) <3
+# stop killing it gosh, save it and make a new solution in somewhere else
