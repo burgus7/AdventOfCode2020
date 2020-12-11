@@ -1,24 +1,40 @@
-#Day 3
+#Day 4
 
-dataFile3 = open("day3data.txt")
-d3 = dataFile3.readlines()
-dataFile3.close()
+dataFile4 = open("day4data.txt")
+d4 = dataFile4.readlines()
+dataFile4.close()
 
-def treeFinder (right, down):
-  ans = 0
-  pos = 0
+ans1 = 0
 
-  for i in range(0, len(d3), down):
-    if (d3[i])[pos] == "#":
-      ans = ans + 1 
-    pos = (pos + right) % (len(d3[i]) - 1)
-  
-  return ans
+passports = []
+curr = ""
+for i in d4:
+  if i == d4[-1]:
+    curr = curr + " " + i
+  if i == '\n' or i == d4[-1]:
+    passports.append(curr)
+    curr = ""
+  else:
+    curr = curr + " " + i
 
-print ("Day 3 Part 1: ", str(treeFinder(3, 1)))
+#print (passports)
 
-#Part 2
-ans2 = treeFinder(1,1) * treeFinder(3,1) * treeFinder(5,1) * treeFinder(7,1) * treeFinder(1, 2)
+for i in passports:
+  fields = i.split(' ')
+  fields.pop(0)
+  numFields = len(fields)
+  for j in fields:
+    if (j.split(":")[0] == 'cid'):
+      numFields = numFields -1
 
-print ("Day 3 Part 2: ", str(ans2))
+  if (numFields == 7):
+    ans1 = ans1 + 1   
+
+print ("Day 4 Part 1: ", ans1)
+
+
+
+
+
+
 
